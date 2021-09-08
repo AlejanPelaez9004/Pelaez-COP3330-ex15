@@ -3,15 +3,21 @@
  *  Copyright 2021 Alejandro Pelaez
  */
 package Pelaez.Alejandro;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args)
     {
-        System.out.print("What is your name?");
+        String pass = "abc$123";
+        System.out.print("What is the password? ");
         Scanner input = new Scanner(System.in);
-        String name = input.next();
-        System.out.print("Hello " + name + ", nice to meet you!");
-        System.out.print("\n");
+        String userInput = input.next();
+
+        if (pass.equals(userInput))
+            System.out.print("Welcome!\n");
+        else
+            System.out.print("I don't know you.\n");
+
     }
 }
